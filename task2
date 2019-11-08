@@ -1,0 +1,7 @@
+def greet_user(username):
+ print("Hello, " + username.swapcase() + "!")
+
+
+greet_user('tHOR')
+greet_user('Loki')
+greet_user('AthenA')
