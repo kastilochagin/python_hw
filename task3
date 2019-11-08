@@ -1,0 +1,34 @@
+import time
+
+
+class Dog(): 
+ def bark(self, barks):
+  self.barks = barks
+  if self.barks == 0: 
+   print ("BARK!!!")
+  else:
+   barkslist = ['BARK!!!'] * self.barks
+   print(" ".join(barkslist))
+
+
+class SmartDog(Dog):
+ def givepaw(self):
+  print("Paw pat")
+
+
+class NoisyDog(Dog):
+ def bark(self, barks):
+  self.barks = barks
+  while True:
+   print("BARK!!!") 
+   time.sleep(1)   
+
+
+dog1 = Dog()
+dog2 = SmartDog()
+dog3 = NoisyDog()
+dog1.bark(3) #dog1 can bark
+dog2.bark(7) #dog2 can bark too
+dog2.givepaw() #dog2 can give a paw
+dog1.givepaw() #this will fail since dog1 can only bark
+dog3.bark(5) #the noisy dog ignores the "barks input" and just barks continually
