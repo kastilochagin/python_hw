@@ -3,7 +3,7 @@
 import docker
 
 client = docker.from_env() #by having the DOCKER_HOST environment variable unset we follow the default client behaviour to connect to the local (Unix) socket
-deeperclient = docker.APIClient(base_url='unix://var/run/docker.sock') #Low-level API comes here for our need to find out (below) the ports, the path and the container creation time
+deeperclient = docker.APIClient(base_url='unix://var/run/docker.sock') #Low-level API comes here for our need to find out (below) additional details of containers and images
 
 print()
 
